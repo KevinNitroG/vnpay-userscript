@@ -4,12 +4,15 @@ on:
   push:
     branches:
       - main
+    tags:
+      - "v*"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v6
         with:
           cache: pnpm
@@ -30,9 +33,7 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v6
-        with:
-          cache: pnpm
+      - uses: pnpm/action-setup@v4
       - name: Download Artifact
         uses: actions/download-artifact@v5
         with:
