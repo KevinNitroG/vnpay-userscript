@@ -29,13 +29,6 @@ export default {
         ],
       },
     ],
-    [
-      "@semantic-release/changelog",
-      {
-        changelogFile: "docs/CHANGELOG.md",
-      },
-    ],
-    "@semantic-release/git",
   ],
   preset: "conventionalcommits",
 };
