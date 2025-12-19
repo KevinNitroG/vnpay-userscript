@@ -24,7 +24,6 @@ export default {
         assets: [
           {
             path: "dist/@KevinNitroG/vnpay-userscript.user.js",
-            label: "Userscript",
           },
         ],
       },
