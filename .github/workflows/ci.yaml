@@ -40,4 +40,4 @@ jobs:
           name: build
       - run: pnpm publish --no-git-checks
         env:
-          TOKEN: ${{ github.token }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
