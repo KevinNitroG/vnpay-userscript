@@ -10,6 +10,7 @@ Auto fill VNPay card for sandbox testing
 ## Usage
 
 1. Open VNPay sandbox payment page
+   > Test with <http://sandbox.vnpayment.vn/tryitnow/Home/CreateOrder>
 2. It will auto fill
 
 ## Configuration
