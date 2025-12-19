@@ -24,7 +24,6 @@ jobs:
     name: Build and Release
     runs-on: ubuntu-latest
     permissions:
-      packages: write
       contents: write
     steps:
       - uses: actions/checkout@v4
