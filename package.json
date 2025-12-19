@@ -31,5 +31,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kevinNitroG/vnpay-userscript"
+  },
+  "engines": {
+    "node": "^25.1.0"
   }
 }

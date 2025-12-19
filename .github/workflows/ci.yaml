@@ -15,6 +15,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           cache: pnpm
+          node-version-file: package.json
       - run: pnpm install
       - run: pnpm tsc
 
@@ -33,6 +34,7 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           cache: pnpm
+          node-version-file: package.json
       - run: pnpm install
       - run: pnpm semantic-release
         env:
