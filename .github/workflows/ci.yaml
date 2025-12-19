@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+      - run: pnpm ci
+      - run: pnpm run build
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v6
+        with:
+          name: build
+          path: |
+            dist/**/*
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v') && github.event_name == 'push'
+    permissions:
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          cache: pnpm
+      - name: Download Artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: build
+      - run: pnpm publish
+        env:
+          TOKEN: ${{ github.token }}
