@@ -14,7 +14,7 @@ export default defineConfig({
         match: ["https://sandbox.vnpayment.vn/*"],
         "run-at": "document-idle",
         grant: "*",
-        version: "0.1.4",
+        version: "0.1.5",
       },
     }),
   ],

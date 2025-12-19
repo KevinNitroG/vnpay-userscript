@@ -38,6 +38,6 @@ jobs:
         uses: actions/download-artifact@v5
         with:
           name: build
-      - run: pnpm publish
+      - run: pnpm publish --no-git-checks
         env:
           TOKEN: ${{ github.token }}
