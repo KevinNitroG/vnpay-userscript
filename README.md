@@ -24,3 +24,8 @@ Tên chủ thẻ:NGUYEN VAN A
 Ngày phát hành:07/15
 Mật khẩu OTP:123456
 ```
+
+## Todo
+
+- [ ] Homepage with select and custom card
+  > Which is why this include react deps
